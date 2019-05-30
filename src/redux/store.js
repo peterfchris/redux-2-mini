@@ -2,10 +2,12 @@ import {createStore, applyMiddleware, combineReducers} from 'redux'
 import hackerNewsReducer from './hackerNewsReducer'
 import promiseMiddleware from 'redux-promise-middleware'
 import mediumReducer from './mediumReducer'
+import redditReducer from './redditReducer'
 
 const rootReducer = combineReducers({
     hackerNews: hackerNewsReducer,
-    medium: mediumReducer
+    medium: mediumReducer,
+    reddit: redditReducer
 })
 
 export default createStore(rootReducer, applyMiddleware(promiseMiddleware))
